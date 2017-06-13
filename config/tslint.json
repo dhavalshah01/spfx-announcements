@@ -11,266 +11,35 @@
   // which are active, other than the list of rules below.
   "lintConfig": {
     // Opt-in to Lint rules which help to eliminate bugs in JavaScript
-    // TypeScript Specific: these rules find errors related to TypeScript features
-        "adjacent-overload-signatures": true,       // Enforces function overloads to be consecutive
-        "member-access": [
-            true,      
-            "check-accessor",
-            "check-constructor"
-            ],                                      // Requires explicit visibility declarations for class members
-        "member-ordering":[
-            true, {
-                "order":[
-                    {
-                        "name": "fields",
-                        "kinds": [
-                            "public-static-field",
-                            "private-static-field",
-                            "protected-static-field",
-                            "public-instance-field",
-                            "protected-instance-field",
-                            "private-instance-field"
-                        ]
-                    },                    
-                    "constructor",
-                    {
-                        "name": "methods",
-                        "kinds": [
-                            "protected-static-method",
-                            "public-static-method",
-                            "private-static-method",
-                            "public-instance-method",
-                            "protected-instance-method",
-                            "private-instance-method"
-                        ]
-                    }   
-                ]
-            }
-        ],                                          // Enforces member ordering
-        "no-any": true,                             // Diallows usages of any as a type declaration
-        "no-inferrable-types": [true],              // Disallows explicit type declarations for variables or parameters initialized to a number, string, or boolean
-        "no-internal-module": true,                 // Disallows internal module
-        "no-magic-numbers": [
-            true,
-            0,1,-1
-            ],                                      // Disallows the use constant number values outside of variable assignments. When no list of allowed values is specified, -1, 0 and 1 are allowed by default
-        "no-namespace":[
-            false,
-            "allow-declarations"
-            ],                                      // Disallows use of internal modules and namespaces
-
-
-        "no-reference": true,                       // Disallows /// <reference path=> imports (use ES6-style imports instead)
-        "no-var-requires": true,                    // Disallows the use of require statements except in import statements
-        "only-arrow-functions": [true],             // Disallows traditional (non-arrow) function expressions
-        "prefer-for-of": true,                      // Recommends a ‘for-of’ loop over a standard ‘for’ loop if the index is only used to access the array being iterated
-        
-        //"promise-function-async": true,           // Requires any function or method that returns a promise to be marked async
-                                                    //   note: this rule requires type info ->  https://github.com/palantir/tslint#type-checking
-        
-        "typedef":[true,
-            "call-signature",
-            "parameter",
-            "arrow-parameter",
-            "property-declaration",
-            "variable-declaration",
-            "member-variable-declaration"
-        ],                                          // Requires type definitions to exist
-        "typedef-whitespace": [
-            true,
-            {
-                "call-signature": "nospace",
-                "index-signature": "nospace",
-                "parameter": "nospace",
-                "property-declaration": "nospace",
-                "variable-declaration": "nospace"
-            }
-        ],                                          // Requires or disallows whitespace for type definitions
-        
-        // Functionality: these rules catch common errors in JS programming 
-        //  or otherwise confusing constructs that are prone to producing bugs
-
-        // "await-promise": true,                   // Warns for an awaited value that is not a Promise
-                                                    //   note: this rule requires type info ->  https://github.com/palantir/tslint#type-checking
-
-        "ban":[],                                   // Bans the use of specific functions or global methods
-        "curly": true,                              // Enforces braces for if/for/do/while statements
-        "forin": true,                              // Requires a for ... in statement to be filtered with an if statement
-        //"import-blacklist": true,                 // Disallows importing the specified modules directly via import and require. Instead only sub modules may be imported from that module
-        "label-position": true,                     // Only allows labels in sensible locations
-        "no-arg": true,                             // Disallows use of arguments.callee
-        "no-bitwise": true,                         // Disallows bitwise operators
-        "no-conditional-assignment": true,          // Disallows any type of assignment in conditionals
-        "no-console":[true,
-            "log", "error"
-            ],                                      // Bans the use of specified console methods
-        "no-construct": true,                       // Disallows access to the constructors of String, Number, and boolean
-        "no-debugger": true,                        // Disallows debugger statements
-        "no-duplicate-variable": true,              // Disallows duplicate variable declarations in the same block scope
-        "no-empty": true,                           // Disallows empty blocks
-        "no-eval": true,                            // Disallows eval function invocations
-        
-        //"no-for-in-array": true,                  // Disallows iterating over an array with a for-in loop
-                                                    //   note: this rule requires type info ->  https://github.com/palantir/tslint#type-checking
-        
-        //"no-inferred-empty-object-type": true,    // Disallow type inference of {} (empty object type) at function and constructor call site
-                                                    //   note: this rule requires type info ->  https://github.com/palantir/tslint#type-checking
-        
-        "no-invalid-this": true,                    // Disallows using the this keyword outside of classes
-        "no-misused-new": true,                     // Warns on apparent attempts to define constructors for interfaces or new for classes.
-        
-        //"no-unbound-method": true,                // Warns when a method is used as outside of a method call.
-                                                    //   note: this rule requires type info ->  https://github.com/palantir/tslint#type-checking        
-       
-        "no-null-keyword": true,                    // Disallows use of the null keyword literals
-        "no-shadowed-variable": true,               // Disallows shadowing variable declarations
-        "no-string-literal": true,                  // Disallows object access via string literals
-        "no-string-throw": true,                    // Flags throwing plain strings or concatenations of strings because only Errors produce proper stack traces.
-        "no-switch-case-fall-through": true,        // Disallows falling through case statements
-        
-        //"no-unsafe-any": true,                    // Warns when using an expression of type ‘any’ in an unsafe way. Type casts and tests are allowed. Expressions that work on all values (such as ‘”” + x’) are allowed.
-                                                    //   note: this rule requires type info ->  https://github.com/palantir/tslint#type-checking        
-        
-        "no-unsafe-finally": true,                  // Disallows control flow statements, such as return, continue, break and throws in finally blocks
-        "no-unused-expression": true,               // Disallows unused expression statements
-        "no-unused-new": true,                      // Disallows unused ‘new’ expression statements
-        //"no-unused-variable":true,                // Disallows unused imports, variables, functions and private class members
-        "no-use-before-declare": true,              // Disallows usage of variables before their declaration
-        "no-var-keyword": true,                     // Disallows usage of the var keyword
-
-        //"no-void-expression": true,               // Requires expressions of type void to appear in statement position.
-                                                    //   note: this rule requires type info ->  https://github.com/palantir/tslint#type-checking        
-
-        "radix": true,                              // Requires the radix parameter to be specified when calling parseInt
-
-        //"restrict-plus-operands": true,           // When adding two variables, operands must both be of type number or of type string
-                                                    //   note: this rule requires type info ->  https://github.com/palantir/tslint#type-checking        
-
-        //"strict-boolean-expressions":"",          // Usage of && or || operators should be with boolean operands and expressions in If, Do, While and For statements should be of type boolean
-                                                    //   note: this rule requires type info ->  https://github.com/palantir/tslint#type-checking        
-
-        //"strict-type-predicates": true,           // Warns for type predicates that are always true or always false.
-                                                    //   note: this rule requires type info ->  https://github.com/palantir/tslint#type-checking        
-
-        "switch-default": true,                     // Require a default case in all switch statements
-        "triple-equals": [
-            true,
-            "allow-null-check"
-        ],                                          // Requires === and !== in place of == and !==
-        "typeof-compare": true,                     // Makes sure result of typeof is compared to correct string values
-        "use-isnan": true,                          // Enforces use of the isNaN() function to check for NaN references instead of a comparison to the NaN constant
-                                                    
-        // Maintainability: These rules make code maintenance easier
-        "cyclomatic-complexity": [true, 5],         // Enforces a threshold of cyclomatic complexity
-        "eofline": true,                            // Ensures the file ends with a newline
-        "indent": [
-            true,
-            "spaces"
-        ],                                          // Enforces indentation with tabs or spaces
-        //"linebreak-style":["LF"],                 // Enforces a consistent linebreak style
-        "max-classes-per-file":[true,5],            // A file may not contain more than the specified number of classes
-        "max-file-line-count":[true, 300],          // Requires files to remain under a certain number of lines
-        "max-line-length":[true, 200],              // Requires lines to be under a certain max length
-        "no-default-export": true,                  // Disallows default exports in ES6-style modules
-        "no-mergeable-namespace": true,             // Disallows mergeable namespaces in the same file
-        "no-require-imports": true,                 // Disallows invocation of require()
-                                                    //   Prefer the newer ES6-style imports over require()
-                                                    //   See http://www.jbrantly.com/es6-modules-with-typescript-and-webpack 
-        "no-trailing-whitespace": true,             // Disallows trailing whitespace at the end of a lines
-        "object-literal-sort-keys": false,          // Requires keys in object literals to be sorted alphabetically
-        "prefer-const": true,                       // Requires that variable declarations use const instead of let if possible
-        "trailing-comma":[true, 
-            {"multiline": "always",
-            "singleline": "never"}
-            ],                                      // Requires or disallows trailing commas in array and object literals, destructuring assignments, 
-                                                    //  function and tuple typings, named imports and function parameter
-
-        // Style: these rules enforce consistent style across your codebase
-        "align":[true, 
-            "parameters",
-            "arguments",
-             "statements"
-            ],                                      // Enforces vertical alignment
-        "array-type":[true, 
-            "generic"
-            ],                                      // Requires using either ‘T[]’ or ‘Array' for arrays
-        "arrow-return-shorthand": [true],           // Suggests to convert () => { return x; } to () => x.
-        "arrow-parens": true,                       // Requires parentheses around the parameters of arrow function definitions
-        "callable-types": true,                     // An interface or literal type with just a call signature can be written as a function type.
-        "class-name": true,                         // Enforces PascalCased class and interface names
-        "comment-format": [
-            true,
-            "check-space",
-            "check-uppercase"
-        ],                                          // Enforces formatting rules for single-line comments
-
-        //"completed-docs":[true],                  // Enforces documentation for important items be filled out
-                                                    //   note: this rule requires type info ->  https://github.com/palantir/tslint#type-checking        
-
-        "file-header":[ 
-            true, "\\w{2,}?"],                      // Enforces a certain header comment for all files, matched by a regular expression
-        "import-spacing": true,                     // Ensures proper spacing between import statement keywords
-        "interface-name":[
-            true, "always-prefix"
-        ],                                          // Requires interface names to begin with a capital ‘I’
-        "interface-over-type-literal": true,        // Prefer an interface declaration over a type literal (type T = { ... })
-        "jsdoc-format": true,                       // Enforces basic format rules for JSDoc comments
-        "new-parens": true,                         // Requires parentheses when invoking a constructor via the new keyword
-        "no-angle-bracket-type-assertion": true,    // Requires the use of as Type for type assertions instead of <Type>
-        
-        //"no-boolean-literal-compare": true        // Warns on comparison to a boolean literal, as in x === true.
-                                                    //   note: this rule requires type info ->  https://github.com/palantir/tslint#type-checking        
-
-        "no-consecutive-blank-lines":[true, 2],     // Disallows one or more blank lines in a row
-        "no-parameter-properties": true,            // Disallows parameter properties in class constructors
-        "no-unnecessary-initializer": true,         // Forbids a ‘var’/’let’ statement or destructuring initializer to be initialized to ‘undefined’.
-        
-        //"no-unnecessary-qualifier": true,         // Warns when a namespace qualifier (A.x) is unnecessary.
-                                                    //   note: this rule requires type info ->  https://github.com/palantir/tslint#type-checking        
-
-        "object-literal-key-quotes":[
-            true, "as-needed"
-            ],                                      // Enforces consistent object literal property quote style
-        "object-literal-shorthand": true,           // Enforces use of ES6 object literal shorthand when possible
-        "one-line": [
-            true,
-            "check-open-brace",
-            "check-whitespace"
-            ],                                      // Requires the specified tokens to be on the same line as the expression preceding them
-        "one-variable-per-declaration":[true,
-            "ignore-for-loop"
-            ],                                      // Disallows multiple variable definitions in the same declaration statement
-        //"ordered-imports":[],                     // Requires that import statements be alphabetized
-         "quotemark": [
-            false,
-            "single",
-            "avoid-escape"
-        ],                                          // Requires single or double quotes for string literals
-        "semicolon": [
-            true,
-            "always"
-        ],                                          // Enforces consistent semicolon usage at the end of every statement
-        "space-before-function-paren": [
-            true,
-            {"anonymous": "always", 
-            "named": "never", 
-            "asyncArrow": "always"}
-            ],                                      // Require or disallow a space before function parenthesis
-        "variable-name": [
-            true,
-            "check-format",
-            "ban-keywords"
-        ],                                           // Checks variable names for various errors
-         "whitespace": [
-            true,
-            "check-branch",
-            "check-decl",
-            "check-module",
-            "check-operator",
-            "check-separator",
-            "check-type",
-            "check-typecast"
-        ]                                           // Enforces whitespace style conventions
-
+    "rules": {
+      "class-name": false,
+      "export-name": false,
+      "forin": false,
+      "label-position": false,
+      "member-access": true,
+      "no-arg": false,
+      "no-console": false,
+      "no-construct": false,
+      "no-duplicate-case": true,
+      "no-duplicate-variable": true,
+      "no-eval": false,
+      "no-function-expression": true,
+      "no-internal-module": true,
+      "no-shadowed-variable": true,
+      "no-switch-case-fall-through": true,
+      "no-unnecessary-semicolons": true,
+      "no-unused-expression": true,
+      "no-unused-imports": true,
+      "no-use-before-declare": true,
+      "no-with-statement": true,
+      "semicolon": true,
+      "trailing-comma": false,
+      "typedef": false,
+      "typedef-whitespace": false,
+      "use-named-parameter": true,
+      "valid-typeof": true,
+      "variable-name": false,
+      "whitespace": false
+    }
   }
 }
