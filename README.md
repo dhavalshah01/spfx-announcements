@@ -1,16 +1,16 @@
+# Creating Annoucnement Webpart using SharePoint Framework
 ## spfx-announcement
 
 This is announcement webpart created using the SharePoint Framework and typescript. This webpart has been created as a part of the following blog post series.
 
-Getting Started with SharePoint Framework (SPFx) (http://www.qipoint.com/blog/getting-started-with-sharepoint-framework-spfx/)
+Article|Link
+--------|---------
+Getting Started with SharePoint Framework (SPFx) | http://www.qipoint.com/blog/getting-started-with-sharepoint-framework-spfx/
+Setting up Developer Environment for SharePoint Framework (SPFx)  | http://www.qipoint.com/blog/setting-up-developer-environment-for-sharepoint-framework-spfx/
+Create your first Client Side Web Part using SharePoint Framework (SPFx) – Part 1  |http://www.qipoint.com/blog/create-your-first-client-side-web-part-using-sharepoint-framework-spfx-part-1/
+Create your first Client Side Web Part using SharePoint Framework (SPFx) – Part 2  | http://www.qipoint.com/blog/create-your-first-client-side-web-part-using-sharepoint-framework-spfx-part-2/
 
-Setting up Developer Environment for SharePoint Framework (SPFx)  (http://www.qipoint.com/blog/setting-up-developer-environment-for-sharepoint-framework-spfx/)
-
-Create your first Client Side Web Part using SharePoint Framework (SPFx) – Part 1 (http://www.qipoint.com/blog/create-your-first-client-side-web-part-using-sharepoint-framework-spfx-part-1/)
-
-Create your first Client Side Web Part using SharePoint Framework (SPFx) – Part 2 (http://www.qipoint.com/blog/create-your-first-client-side-web-part-using-sharepoint-framework-spfx-part-2/)
-
-##Screenshot
+## Screenshot
 
 ![Announcement Webpart using SharePoint Framework](https://github.com/dhavalshah01/spfx-announcements/blob/master/Screenshots/Announcement%20SharePoint%20SPFX%20Webpart.png)
 
