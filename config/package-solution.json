@@ -1,0 +1,10 @@
+{
+  "solution": {
+    "name": "spfx-announcement-client-side-solution",
+    "id": "9af7ce6b-7e38-427b-a4f5-129dd1acfc0a",
+    "version": "1.0.0.0"
+  },
+  "paths": {
+    "zippedPackage": "solution/spfx-announcement.sppkg"
+  }
+}
