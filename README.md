@@ -12,7 +12,7 @@ Create your first Client Side Web Part using SharePoint Framework (SPFx) – Par
 
 ##Screenshot
 
-![Announcement Webpart using SharePoint Framework ](./Screenshots/Announcement SharePoint SPFX Webpart.png)
+![Announcement Webpart using SharePoint Framework](https://github.com/dhavalshah01/spfx-announcements/blob/master/Screenshots/Announcement%20SharePoint%20SPFX%20Webpart.png)
 
 
 ## Applies to
