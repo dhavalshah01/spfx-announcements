@@ -7,8 +7,9 @@ Article|Link
 --------|---------
 Getting Started with SharePoint Framework (SPFx) | http://www.qipoint.com/blog/getting-started-with-sharepoint-framework-spfx/
 Setting up Developer Environment for SharePoint Framework (SPFx)  | http://www.qipoint.com/blog/setting-up-developer-environment-for-sharepoint-framework-spfx/
-Create your first Client Side Web Part using SharePoint Framework (SPFx) – Part 1  |http://www.qipoint.com/blog/create-your-first-client-side-web-part-using-sharepoint-framework-spfx-part-1/
-Create your first Client Side Web Part using SharePoint Framework (SPFx) – Part 2  | http://www.qipoint.com/blog/create-your-first-client-side-web-part-using-sharepoint-framework-spfx-part-2/
+SharePoint Framework (SPFx) (Part 1) Create a simple Client Side Web Part  |http://www.qipoint.com/blog/create-your-first-client-side-web-part-using-sharepoint-framework-spfx-part-1/
+SharePoint Framework (SPFx) (Part 2) Create a Simple Client-side Web Part  | http://www.qipoint.com/blog/create-your-first-client-side-web-part-using-sharepoint-framework-spfx-part-2/
+SharePoint Framework (SPFx) (Part 3) Deploying and Shipping Your Client-side Web Part with Office 365 CDN | http://www.qipoint.com/blog/sharepoint-framework-spfx-part-3-deploying-and-shipping-your-client-side-web-part-with-office-365-cdn/
 
 ## Screenshot
 
